@@ -1,0 +1,14 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
+        s_map = defaultdict(int)
+        t_map = defaultdict(int)
+        for char in s:
+            s_map[char] += 1
+        for char in t:
+            t_map[char] += 1
+        
+        print(s_map,t_map)
+        return (s_map == t_map)
+
